@@ -3,12 +3,10 @@ var user    = {};
 
 function addLine(dataUser){
 
-    var tr = document.createElement("tr");
-
-    tr.innerHTML = `
+    document.getElementById("table-users").innerHTML = `
         <tr>
             <td><img src="dist/img/user1-128x128.jpg" alt="User Image" class="img-circle img-sm"></td>
-            <td>${dataUser.naadminme}</td>
+            <td>${dataUser.name}</td>
             <td>${dataUser.email}</td>
             <td>${dataUser.admin}</td>
             <td>${dataUser.birth}</td>
@@ -43,6 +41,16 @@ document.getElementById("form-user-create").addEventListener("submit", function(
         }
     });
 
-    addLine(user);
+    var objectUser = new User(
+        user.name, 
+        user.gender, 
+        user.birth, 
+        user.country, 
+        user.password,
+        user.photo,
+        user.admin
+    );
+
+    addLine(objectUser);
 
 });
