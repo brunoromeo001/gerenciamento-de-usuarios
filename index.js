@@ -1,13 +1,5 @@
-var nome        = document.querySelector('#exampleInputName');
-var genero      = document.querySelectorAll("#form-user-create [name=gender]:checked");
-var nascimento  = document.querySelector('#exampleInputBirth');
-var pais        = document.querySelector('#exampleInputCountry');
-var email       = document.querySelector('#exampleInputEmail');
-var senha       = document.querySelector('#exampleInputPassword');
-var foto        = document.querySelector('#exampleInputFile');
-var admin       = document.querySelector('#exampleInputAdmin');
-
-var fields       = document.querySelectorAll('#form-user-create [name]');
+var fields  = document.querySelectorAll('#form-user-create [name]');
+var user    = {};
 
 fields.forEach(function(field, index){
 
@@ -15,14 +7,12 @@ fields.forEach(function(field, index){
 
         if(field.checked){
 
-            console.log("sim", field);
+            user[field.name] = field.value;
         }
     }else{
 
-        console.log("não");
+        user[field.name] = field.value;
     }
-
-
-    //console.log(field.id, field.name, field.nodeValue, field.checked, index);
-
 });
+
+console.log(user);
