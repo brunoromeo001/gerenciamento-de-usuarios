@@ -84,7 +84,7 @@ class UserController{
                 }
             }else if(field.name == "admin"){
 
-                user[field.name] == field.checked;
+                user[field.name] = field.checked;
             }
             else{
     
@@ -97,6 +97,7 @@ class UserController{
             user.gender, 
             user.birth, 
             user.country, 
+            user.email,
             user.password,
             user.photo,
             user.admin
