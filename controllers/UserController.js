@@ -205,7 +205,7 @@ class UserController{
         tr.querySelector(".btn-edit").addEventListener("click", e=>{
 
             let json = JSON.parse(tr.dataset.user);
-            let form = document.querySelector("#box-user-update");
+            let form = document.querySelector("#form-user-update");
 
             form.dataset.trIndex = tr.sectionRowIndex;
 
