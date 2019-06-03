@@ -45,12 +45,13 @@ class UserController{
                     }else{
 
                         result._photo = content;
-
                     }
 
                     let user = new User();
 
                     user.loadFromJSON(result);
+
+                    user.save();
                     
                     this.getTr(user, tr);                   
 
@@ -91,7 +92,7 @@ class UserController{
                     
                     values.photo = content;
 
-                    this.insert(values);
+                    values.save();
         
                     this.addLine(values);
 
