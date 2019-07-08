@@ -100,7 +100,7 @@ class User{
 
     getNewId(){
 
-        let usersId = parseInt(localStorage.getItem("userId"));
+        let usersId = parseInt(localStorage.getItem("usersId"));
 
         if (!usersId > 0) usersId = 0;
 
